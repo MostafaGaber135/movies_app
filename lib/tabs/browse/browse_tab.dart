@@ -29,7 +29,7 @@ class BrowseTab extends StatelessWidget {
               child: GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
-                  crossAxisSpacing: 20,
+                  crossAxisSpacing: 10,
                 ),
                 itemCount: 10,
                 itemBuilder: (BuildContext context, int index) {
