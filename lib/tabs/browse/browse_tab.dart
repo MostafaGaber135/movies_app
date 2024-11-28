@@ -10,8 +10,8 @@ class BrowseTab extends StatelessWidget {
     return SafeArea(
       child: Padding(
         padding: const EdgeInsets.symmetric(
-          vertical: 18,
-          horizontal: 18,
+          vertical: 25,
+          horizontal: 25,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
