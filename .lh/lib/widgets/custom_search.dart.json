@@ -1,0 +1,50 @@
+{
+    "sourceFile": "lib/widgets/custom_search.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1732770246117,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1732770259889,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-statles\n\\ No newline at end of file\n+statl\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1732770265217,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,8 @@\n-statl\n\\ No newline at end of file\n+class className extends StatelessWidget {\r\n+  const className({Key? key}) : super(key: key);\r\n+\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return const SizedBox();\r\n+  }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1732770273055,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n-class className extends StatelessWidget {\r\n-  const className({Key? key}) : super(key: key);\r\n+import 'package:flutter/material.dart';\r\n \r\n+class CustomSearch extends StatelessWidget {\r\n+  const CustomSearch({Key? key}) : super(key: key);\r\n+\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return const SizedBox();\r\n   }\r\n"
+                },
+                {
+                    "date": 1732770278946,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import 'package:flutter/material.dart';\r\n \r\n class CustomSearch extends StatelessWidget {\r\n-  const CustomSearch({Key? key}) : super(key: key);\r\n+  const CustomSearch({super.key});\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return const SizedBox();\r\n+    return const cONTAINER();\r\n   }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1732770284161,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,10 @@\n+import 'package:flutter/material.dart';\r\n+\r\n+class CustomSearch extends StatelessWidget {\r\n+  const CustomSearch({super.key});\r\n+\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return  Container();\r\n+  }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1732770340717,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,27 @@\n+import 'package:flutter/material.dart';\r\n+\r\n+class CustomSearch extends StatelessWidget {\r\n+  const CustomSearch({super.key});\r\n+\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return  Container(\r\n+          width: 300, // Adjust width as needed\r\n+          padding: const EdgeInsets.symmetric(horizontal: 10),\r\n+          decoration: BoxDecoration(\r\n+            color: Colors.grey[800], // Background color similar to the image\r\n+            borderRadius: BorderRadius.circular(30),\r\n+          ),\r\n+          child: TextField(\r\n+            decoration: InputDecoration(\r\n+              hintText: 'Search',\r\n+              hintStyle: TextStyle(color: Colors.grey[500]),\r\n+              prefixIcon: Icon(Icons.search, color: Colors.grey[500]),\r\n+              border: InputBorder.none,\r\n+            ),\r\n+            style: const TextStyle(color: Colors.white),\r\n+          ),\r\n+        ),\r\n+      );\r\n+  }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1732770348796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n               hintStyle: TextStyle(color: Colors.grey[500]),\r\n               prefixIcon: Icon(Icons.search, color: Colors.grey[500]),\r\n               border: InputBorder.none,\r\n             ),\r\n-            style: const const  TextStyle(color: Colors.white),\r\n+            style: const   TextStyle(color: Colors.white),\r\n           ),\r\n    \r\n       );\r\n   }\r\n"
+                },
+                {
+                    "date": 1732770356451,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n               hintStyle: TextStyle(color: Colors.grey[500]),\r\n               prefixIcon: Icon(Icons.search, color: Colors.grey[500]),\r\n               border: InputBorder.none,\r\n             ),\r\n-            style:    TextStyle(color: Colors.white),\r\n+            style: const   const TextStyle(color: Colors.white),\r\n           ),\r\n    \r\n       );\r\n   }\r\n"
+                }
+            ],
+            "date": 1732770246106,
+            "name": "Commit-0",
+            "content": "statles"
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "sourceFile": "lib/tabs/watchlist/watchlist_tab.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1732768434462,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1732768442480,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import 'package:flutter/material.dart';\r\n \r\n-class HomeTab extends StatelessWidget {\r\n-  const HomeTab({super.key});\r\n+class WatchlistTab\r\n+ extends StatelessWidget {\r\n+  const WatchlistTab({super.key});\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return const Center(\r\n"
+                },
+                {
+                    "date": 1732768448554,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,7 @@\n import 'package:flutter/material.dart';\r\n \r\n-class WatchlistTab\r\n- extends StatelessWidget {\r\n+class WatchlistTab extends StatelessWidget {\r\n   const WatchlistTab({super.key});\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n"
+                },
+                {
+                    "date": 1732769618733,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,11 @@\n   Widget build(BuildContext context) {\r\n     return const Center(\r\n       child: Text(\r\n         'Watchlist tab',\r\n+        style: TextStyle(\r\n+          color: Colors.white,\r\n+        ),\r\n       ),\r\n     );\r\n   }\r\n }\r\n"
+                }
+            ],
+            "date": 1732768434462,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\n\r\nclass HomeTab extends StatelessWidget {\r\n  const HomeTab({super.key});\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return const Center(\r\n      child: Text(\r\n        'Home tab',\r\n      ),\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}
