@@ -23,7 +23,7 @@ class CustomBrowser extends StatelessWidget {
               width: 158,
               height: 90,
               color: Colors.black.withOpacity(
-                0.24,
+                0.25,
               ),
               child: Center(
                 child: Text(
