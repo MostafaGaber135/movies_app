@@ -25,17 +25,12 @@ class AppTheme {
 
   static ThemeData lightTheme = ThemeData(
     primaryColor: darkBlack,
+
     appBarTheme: const AppBarTheme(
       backgroundColor: Colors.transparent,
       centerTitle: true,
     ),
-    iconButtonTheme: IconButtonThemeData(
-      style: ButtonStyle(
-        iconColor: WidgetStateProperty.all(
-          darkBlack,
-        ),
-      ),
-    ),
+    iconTheme: const IconThemeData(color: Colors.white),
     scaffoldBackgroundColor: darkBlack,
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       type: BottomNavigationBarType.fixed,

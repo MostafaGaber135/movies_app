@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:movies_app/app_theme.dart';
 import 'package:movies_app/screens/intro_page_screen.dart';
+import 'package:movies_app/tabs/browse/browse_tab.dart';
 import 'package:movies_app/widgets/splash_screen.dart';
 
 void main() {
@@ -17,6 +18,7 @@ class MoviesApp extends StatelessWidget {
       routes: {
         SplashScreen.routeName: (_) => const SplashScreen(),
         IntroPageScreen.routeName: (_) => const IntroPageScreen(),
+        BrowserTab.routeName: (_) => const BrowserTab(),
       },
       initialRoute: SplashScreen.routeName,
     );

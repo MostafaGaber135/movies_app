@@ -18,7 +18,7 @@ class _IntroPageScreenState extends State<IntroPageScreen> {
   List<Widget> tabs = [
     const HomeTab(),
     const SearchTab(),
-    const BrowseTab(),
+    const BrowserTab(),
     const WatchlistTab(),
   ];
   int currentTabIndex = 0;
