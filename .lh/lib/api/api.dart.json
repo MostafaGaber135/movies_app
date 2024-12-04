@@ -1,0 +1,38 @@
+{
+    "sourceFile": "lib/api/api.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1732827768163,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1732827824276,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,27 @@\n+import 'package:http/http.dart' as http;\r\n+import 'dart:convert';\r\n+\r\n+Future<List<Map<String, dynamic>>> fetchGenres() async {\r\n+  final response = await http.get(Uri.parse('https://api.themoviedb.org/3/genre/movie/list?c7558ccb1e92b084efd7b8647dc31771'));\r\n+  if (response.statusCode == 200) {\r\n+    final data = jsonDecode(response.body);\r\n+    return (data['genres'] as List).map((genre) {\r\n+      return {\r\n+        'id': genre['id'],\r\n+        'name': genre['name'],\r\n+      };\r\n+    }).toList();\r\n+  } else {\r\n+    throw Exception('Failed to load genres');\r\n+  }\r\n+}\r\n+\r\n+Future<List<dynamic>> fetchMoviesByGenre(int genreId) async {\r\n+  final response = await http.get(Uri.parse('https://api.themoviedb.org/3/discover/movie?api_key=YOUR_API_KEY&with_genres=$genreId'));\r\n+  if (response.statusCode == 200) {\r\n+    final data = jsonDecode(response.body);\r\n+    return data['results'];\r\n+  } else {\r\n+    throw Exception('Failed to load movies');\r\n+  }\r\n+}\r\n"
+                },
+                {
+                    "date": 1732827890761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,39 +16,12 @@\n   }\r\n }\r\n \r\n Future<List<dynamic>> fetchMoviesByGenre(int genreId) async {\r\n-  final response = await http.get(Uri.parse('https://api.themoviedb.org/3/discover/movie?api_key=YOUR_API_KEY&with_genres=$genreId'));\r\n+  final response = await http.get(Uri.parse('https://api.themoviedb.org/3/discover/movie?api_key=&with_genres=$genreId'));\r\n   if (response.statusCode == 200) {\r\n     final data = jsonDecode(response.body);\r\n     return data['results'];\r\n   } else {\r\n     throw Exception('Failed to load movies');\r\n   }\r\n }\r\n-import 'package:http/http.dart' as http;\r\n-import 'dart:convert';\r\n-\r\n-Future<List<Map<String, dynamic>>> fetchGenres() async {\r\n-  final response = await http.get(Uri.parse('https://api.themoviedb.org/3/genre/movie/list?api_key=YOUR_API_KEY'));\r\n-  if (response.statusCode == 200) {\r\n-    final data = jsonDecode(response.body);\r\n-    return (data['genres'] as List).map((genre) {\r\n-      return {\r\n-        'id': genre['id'],\r\n-        'name': genre['name'],\r\n-      };\r\n-    }).toList();\r\n-  } else {\r\n-    throw Exception('Failed to load genres');\r\n-  }\r\n-}\r\n-\r\n-Future<List<dynamic>> fetchMoviesByGenre(int genreId) async {\r\n-  final response = await http.get(Uri.parse('https://api.themoviedb.org/3/discover/movie?api_key=YOUR_API_KEY&with_genres=$genreId'));\r\n-  if (response.statusCode == 200) {\r\n-    final data = jsonDecode(response.body);\r\n-    return data['results'];\r\n-  } else {\r\n-    throw Exception('Failed to load movies');\r\n-  }\r\n-}\r\n"
+                },
+                {
+                    "date": 1732828606410,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,13 @@\n import 'package:http/http.dart' as http;\r\n import 'dart:convert';\r\n \r\n+const String apiKey = 'c7558ccb1e92b084efd7b8647dc31771';\r\n+\r\n+/// Fetches a list of genres from TMDB API\r\n Future<List<Map<String, dynamic>>> fetchGenres() async {\r\n-  final response = await http.get(Uri.parse('https://api.themoviedb.org/3/genre/movie/list?c7558ccb1e92b084efd7b8647dc31771'));\r\n+  final response = await http.get(Uri.parse(\r\n+      'https://api.themoviedb.org/3/genre/movie/list?api_key=$apiKey&language=en'));\r\n   if (response.statusCode == 200) {\r\n     final data = jsonDecode(response.body);\r\n     return (data['genres'] as List).map((genre) {\r\n       return {\r\n@@ -15,10 +19,12 @@\n     throw Exception('Failed to load genres');\r\n   }\r\n }\r\n \r\n+/// Fetches a list of movies by genre ID\r\n Future<List<dynamic>> fetchMoviesByGenre(int genreId) async {\r\n-  final response = await http.get(Uri.parse('https://api.themoviedb.org/3/discover/movie?api_key=&with_genres=$genreId'));\r\n+  final response = await http.get(Uri.parse(\r\n+      'https://api.themoviedb.org/3/discover/movie?api_key=$apiKey&language=en-US&with_genres=$genreId&sort_by=popularity.desc'));\r\n   if (response.statusCode == 200) {\r\n     final data = jsonDecode(response.body);\r\n     return data['results'];\r\n   } else {\r\n"
+                },
+                {
+                    "date": 1732855692584,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,10 +18,8 @@\n   } else {\r\n     throw Exception('Failed to load genres');\r\n   }\r\n }\r\n-\r\n-/// Fetches a list of movies by genre ID\r\n Future<List<dynamic>> fetchMoviesByGenre(int genreId) async {\r\n   final response = await http.get(Uri.parse(\r\n       'https://api.themoviedb.org/3/discover/movie?api_key=$apiKey&language=en-US&with_genres=$genreId&sort_by=popularity.desc'));\r\n   if (response.statusCode == 200) {\r\n"
+                },
+                {
+                    "date": 1732855719528,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,8 @@\n import 'dart:convert';\r\n \r\n const String apiKey = 'c7558ccb1e92b084efd7b8647dc31771';\r\n \r\n-/// Fetches a list of genres from TMDB API\r\n Future<List<Map<String, dynamic>>> fetchGenres() async {\r\n   final response = await http.get(Uri.parse(\r\n       'https://api.themoviedb.org/3/genre/movie/list?api_key=$apiKey&language=en'));\r\n   if (response.statusCode == 200) {\r\n"
+                }
+            ],
+            "date": 1732827768163,
+            "name": "Commit-0",
+            "content": "import 'package:http/http.dart' as http;\r\nimport 'dart:convert';\r\n\r\nFuture<List<Map<String, dynamic>>> fetchGenres() async {\r\n  final response = await http.get(Uri.parse('https://api.themoviedb.org/3/genre/movie/list?api_key=YOUR_API_KEY'));\r\n  if (response.statusCode == 200) {\r\n    final data = jsonDecode(response.body);\r\n    return (data['genres'] as List).map((genre) {\r\n      return {\r\n        'id': genre['id'],\r\n        'name': genre['name'],\r\n      };\r\n    }).toList();\r\n  } else {\r\n    throw Exception('Failed to load genres');\r\n  }\r\n}\r\n\r\nFuture<List<dynamic>> fetchMoviesByGenre(int genreId) async {\r\n  final response = await http.get(Uri.parse('https://api.themoviedb.org/3/discover/movie?api_key=YOUR_API_KEY&with_genres=$genreId'));\r\n  if (response.statusCode == 200) {\r\n    final data = jsonDecode(response.body);\r\n    return data['results'];\r\n  } else {\r\n    throw Exception('Failed to load movies');\r\n  }\r\n}\r\n"
+        }
+    ]
+}

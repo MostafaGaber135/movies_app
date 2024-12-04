@@ -25,18 +25,18 @@ class AppTheme {
 
   static ThemeData lightTheme = ThemeData(
     primaryColor: darkBlack,
-
     appBarTheme: const AppBarTheme(
+      elevation: 0,
+      scrolledUnderElevation: 0,
       backgroundColor: Colors.transparent,
       centerTitle: true,
     ),
-    iconTheme: const IconThemeData(color: Colors.white),
     scaffoldBackgroundColor: darkBlack,
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       type: BottomNavigationBarType.fixed,
       backgroundColor: pitchBlack,
       selectedItemColor: gradientYellowStart,
-      unselectedItemColor: white,
+      unselectedItemColor: lightGrey,
       showSelectedLabels: true,
       showUnselectedLabels: true,
     ),
@@ -92,15 +92,5 @@ class AppTheme {
         fontFamily: 'Poppins',
       ),
     ),
-    // elevatedButtonTheme: ElevatedButtonThemeData(
-    //   style: ElevatedButton.styleFrom(
-    //     backgroundColor: primary,
-    //   ),
-    // ),
-    // textButtonTheme: TextButtonThemeData(
-    //   style: TextButton.styleFrom(
-    //     foregroundColor: primary,
-    //   ),
-    // ),
   );
 }

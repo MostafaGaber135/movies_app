@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/app_theme.dart';
 
 class CustomBrowser extends StatelessWidget {
   final String title;
@@ -32,7 +31,7 @@ class CustomBrowser extends StatelessWidget {
                 child: Text(
                   title,
                   style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                        color: AppTheme.white,
+                        color: Colors.white,
                       ),
                 ),
               ),

@@ -3,19 +3,18 @@ import 'package:movies_app/api/api.dart';
 import 'package:movies_app/app_theme.dart';
 import 'package:movies_app/tabs/browse/movie_list_screen.dart';
 import 'package:movies_app/widgets/custom_browser.dart';
+import 'package:movies_app/widgets/error_indicator.dart';
+import 'package:movies_app/widgets/loading_indicator.dart';
 
 class BrowserTab extends StatelessWidget {
   const BrowserTab({super.key});
   static const String routeName = 'browser';
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 25),
-        padding: const EdgeInsets.symmetric(
-          vertical: 18,
-          horizontal: 18,
-        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -25,23 +24,25 @@ class BrowserTab extends StatelessWidget {
                     color: AppTheme.white,
                   ),
             ),
-            const SizedBox(height: 30),
+            const SizedBox(height: 10),
             FutureBuilder<List<Map<String, dynamic>>>(
               future: fetchGenres(),
               builder: (context, snapshot) {
                 if (snapshot.connectionState == ConnectionState.waiting) {
-                  return const Center(
-                    child: CircularProgressIndicator(),
-                  );
+                  return const LoadingIndicator();
                 } else if (snapshot.hasError) {
-                  return Center(child: Text('Error: ${snapshot.error}'));
+                  return const ErrorIndicator();
                 } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
-                  return const Center(child: Text('No categories available'));
+                  return const Center(
+                    child: Text(
+                      'No categories available',
+                    ),
+                  );
                 }
-
                 final genres = snapshot.data!;
                 return Expanded(
                   child: GridView.builder(
+                    physics: const BouncingScrollPhysics(),
                     gridDelegate:
                         const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
