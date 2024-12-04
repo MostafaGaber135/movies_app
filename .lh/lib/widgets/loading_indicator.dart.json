@@ -1,0 +1,26 @@
+{
+    "sourceFile": "lib/widgets/loading_indicator.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1732883754247,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1732883762684,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import 'package:flutter/material.dart';\r\n+import 'package:movies_app/app_theme.dart';\r\n import 'package:news/app_theme.dart';\r\n \r\n class LoadingIndicator extends StatelessWidget {\r\n   const LoadingIndicator({super.key});\r\n"
+                },
+                {
+                    "date": 1732883773791,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,15 @@\n import 'package:flutter/material.dart';\r\n import 'package:movies_app/app_theme.dart';\r\n-import 'package:news/app_theme.dart';\r\n \r\n class LoadingIndicator extends StatelessWidget {\r\n   const LoadingIndicator({super.key});\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return const Center(\r\n       child: CircularProgressIndicator(\r\n-        color: AppTheme.primary,\r\n+        color: AppTheme.white,\r\n       ),\r\n     );\r\n   }\r\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1732883754247,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\nimport 'package:news/app_theme.dart';\r\n\r\nclass LoadingIndicator extends StatelessWidget {\r\n  const LoadingIndicator({super.key});\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return const Center(\r\n      child: CircularProgressIndicator(\r\n        color: AppTheme.primary,\r\n      ),\r\n    );\r\n  }\r\n}"
+        }
+    ]
+}

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 2,
+            "activePatchIndex": 3,
             "patches": [
                 {
                     "date": 1732765707448,
@@ -16,6 +16,10 @@
                 {
                     "date": 1732765719486,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n   const SplashScreen({super.key});\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return const Container();\r\n+    return  Container();\r\n   }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1732766087996,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+import 'package:flutter/material.dart';\r\n+\r\n+class SplashScreen extends StatelessWidget {\r\n+  const SplashScreen({super.key});\r\n+  static const String routeName = '/splash';\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return const Scaffold(\r\n+      \r\n+    );\r\n+  }\r\n+}\r\n"
                 }
             ],
             "date": 1732765707448,

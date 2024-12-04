@@ -1,0 +1,22 @@
+{
+    "sourceFile": "lib/tabs/browse/data/genre_api.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1733264325043,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1733264331176,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,23 +1,5 @@\n \r\n-To separate the fetchGenres API logic from the BrowserTab widget and place it in a dedicated file, you can follow these steps:\r\n-\r\n-Create a separate file for the API\r\n-Let's create a file named genre_api.dart to handle the fetchGenres function.\r\n-\r\n-Move the fetchGenres function to the new file\r\n-Place the API function in the new file and export it.\r\n-\r\n-Import the new file in the original widget\r\n-Update the BrowserTab widget to import the new file for accessing the fetchGenres function.\r\n-\r\n-Step 1: Create genre_api.dart\r\n-lib/api/genre_api.dart\r\n-\r\n-dart\r\n-Copy code\r\n-import 'dart:convert';\r\n-import 'package:http/http.dart' as http;\r\n Future<List<Map<String, dynamic>>> fetchGenres() async {\r\n   final response = await http.get(Uri.parse(apiUrl));\r\n \r\n   if (response.statusCode == 200) {\r\n"
+                }
+            ],
+            "date": 1733264325043,
+            "name": "Commit-0",
+            "content": "Future<List<Map<String, dynamic>>> fetchGenres() async {\r\n  final response = await http.get(Uri.parse(apiUrl));\r\n\r\n  if (response.statusCode == 200) {\r\n    final List<dynamic> data = json.decode(response.body);\r\n    return data.cast<Map<String, dynamic>>();\r\n  } else {\r\n    throw Exception('Failed to load genres');\r\n  }\r\n}"
+        }
+    ]
+}

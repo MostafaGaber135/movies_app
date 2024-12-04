@@ -1,15 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:movies_app/app_theme.dart';
+import 'package:movies_app/screens/intro_page_screen.dart';
+import 'package:movies_app/widgets/splash_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MoviesApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MoviesApp extends StatelessWidget {
+  const MoviesApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: AppTheme.lightTheme,
+      routes: {
+        SplashScreen.routeName: (_) => const SplashScreen(),
+        IntroPageScreen.routeName: (_) => const IntroPageScreen(),
+      },
+      initialRoute: SplashScreen.routeName,
     );
   }
 }

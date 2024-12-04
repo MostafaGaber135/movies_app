@@ -1,0 +1,74 @@
+{
+    "sourceFile": "lib/widgets/custom_browser.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 14,
+            "patches": [
+                {
+                    "date": 1732806566379,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1732806571935,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n-class className extends StatelessWidget {\r\n-  const className({Key? key}) : super(key: key);\r\n+import 'package:flutter/material.dart';\r\n \r\n+class CustomBrowser extends StatelessWidget {\r\n+  const CustomBrowser({Key? key}) : super(key: key);\r\n+\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return const SizedBox();\r\n   }\r\n"
+                },
+                {
+                    "date": 1732806579279,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import 'package:flutter/material.dart';\r\n \r\n class CustomBrowser extends StatelessWidget {\r\n-  const CustomBrowser({Key? key}) : super(key: key);\r\n+  const CustomBrowser({super.key});\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return const SizedBox();\r\n+    return const Container();\r\n   }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1732806701475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n   const CustomBrowser({super.key});\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return const Container();\r\n+    return pLAC();\r\n   }\r\n\\ No newline at end of file\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1732806744144,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n   const CustomBrowser({super.key});\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return pLAC();\r\n+    return const Container();\r\n   }\r\n\\ No newline at end of file\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1732806762665,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,9 @@\n   const CustomBrowser({super.key});\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return const Container();\r\n+    return  Container(\r\n+      child: image,\r\n\\ No newline at end of file\n+    );\r\n   }\r\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1732806778972,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,8 @@\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return  Container(\r\n-      child: image,\r\n+      child: Image.asset(name),\r\n     );\r\n   }\r\n\\ No newline at end of file\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1732806891193,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   const CustomBrowser({super.key});\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return  Container(\r\n-      child: Image.asset(name),\r\n+    return  ClipRRect(\r\n+      child: Image.asset('name'),\r\n     );\r\n\\ No newline at end of file\n   }\r\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1732806896867,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return  ClipRRect(\r\n-      child: Image.asset('name'),\r\n+      borderRadius: BorderRadius.circular(15),\r\n+      \r\n     );\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1732807090182,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,12 @@\n   const CustomBrowser({super.key});\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return  ClipRRect(\r\n-      borderRadius: BorderRadius.circular(15),\r\n-      \r\n+    return ClipRRect(\r\n+      borderRadius: BorderRadius.circular(\r\n+        15,\r\n\\ No newline at end of file\n+      ),\r\n+      child: ,\r\n     );\r\n   }\r\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1732807098123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,12 @@\n     return ClipRRect(\r\n       borderRadius: BorderRadius.circular(\r\n         15,\r\n       ),\r\n-      child: ,\r\n+      child: const Stack(\r\n+        children: [\r\n+          Ima\r\n\\ No newline at end of file\n+        ],\r\n+      ),\r\n     );\r\n   }\r\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1732807104475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,12 +8,12 @@\n     return ClipRRect(\r\n       borderRadius: BorderRadius.circular(\r\n         15,\r\n       ),\r\n-      child: const Stack(\r\n+      child:  Stack(\r\n         children: [\r\n-          Ima\r\n+          Image.asset('')\r\n         ],\r\n       ),\r\n     );\r\n\\ No newline at end of file\n   }\r\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1732807187226,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,10 +10,10 @@\n         15,\r\n       ),\r\n       child:  Stack(\r\n         children: [\r\n-          Image.asset('')\r\n+          Image.asset('assets/images/action.png')\r\n         ],\r\n       ),\r\n     );\r\n   }\r\n\\ No newline at end of file\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1732807260947,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,9 @@\n       child: Stack(\r\n         children: [\r\n           Image.asset(\r\n             'assets/images/action.png',\r\n+            fit: BoxFit.cover,\r\n           ),\r\n         ],\r\n       ),\r\n     );\r\n"
+                },
+                {
+                    "date": 1732807267226,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,10 @@\n         children: [\r\n           Image.asset(\r\n             'assets/images/action.png',\r\n             fit: BoxFit.cover,\r\n+            width: 350,\r\n+            height: 200,\r\n           ),\r\n         ],\r\n       ),\r\n     );\r\n"
+                }
+            ],
+            "date": 1732806566379,
+            "name": "Commit-0",
+            "content": "class className extends StatelessWidget {\r\n  const className({Key? key}) : super(key: key);\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return const SizedBox();\r\n  }\r\n}"
+        }
+    ]
+}

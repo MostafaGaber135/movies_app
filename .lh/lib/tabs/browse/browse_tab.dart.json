@@ -1,0 +1,54 @@
+{
+    "sourceFile": "lib/tabs/browse/browse_tab.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1732768393650,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1732768401309,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import 'package:flutter/material.dart';\r\n \r\n-class HomeTab extends StatelessWidget {\r\n-  const HomeTab({super.key});\r\n+class BrowseTab extends StatelessWidget {\r\n+  const BrowseTab({super.key});\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return const Center(\r\n"
+                },
+                {
+                    "date": 1732768406866,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   @override\r\n   Widget build(BuildContext context) {\r\n     return const Center(\r\n       child: Text(\r\n-        'Home tab',\r\n+        'Browse tab',\r\n       ),\r\n     );\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1732769581777,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n   Widget build(BuildContext context) {\r\n     return const Center(\r\n       child: Text(\r\n         'Browse tab',\r\n+        style: TextStyle(color: COLORS),\r\n       ),\r\n     );\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1732805842939,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,12 +4,7 @@\n   const BrowseTab({super.key});\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return const Center(\r\n-      child: Text(\r\n-        'Browse tab',\r\n-        style: TextStyle(color: COLORS),\r\n-      ),\r\n-    );\r\n+    return Column();\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1732805858939,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n   const BrowseTab({super.key});\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return Column();\r\n+    return const Column(children: [Text('')],);\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1732805866204,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n   const BrowseTab({super.key});\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return const Column(children: [Text('')],);\r\n+    return const Column(children: [Text('bROWSE Category')],);\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1732805877518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,15 @@\n   const BrowseTab({super.key});\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return const Column(children: [Text('bROWSE Category')],);\r\n+    return sCAF(\r\n+      child: const Column(\r\n+        children: [\r\n+          Text(\r\n+            'bROWSE Category',\r\n+          ),\r\n+        ],\r\n+      ),\r\n+    );\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1732805884245,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return const Scaffold(\r\n-      child: const Column(\r\n+      body: const Column(\r\n         children: [\r\n           Text(\r\n             'bROWSE Category',\r\n           ),\r\n"
+                },
+                {
+                    "date": 1732805915298,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,11 @@\n       child: Column(\r\n         children: [\r\n           Text(\r\n             'bROWSE Category',\r\n+             style: TextStyle(\r\n+          color: Colors.white,\r\n+        ),\r\n           ),\r\n         ],\r\n       ),\r\n     );\r\n"
+                }
+            ],
+            "date": 1732768393650,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\n\r\nclass HomeTab extends StatelessWidget {\r\n  const HomeTab({super.key});\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return const Center(\r\n      child: Text(\r\n        'Home tab',\r\n      ),\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}
