@@ -1,15 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:movies_app/TopRatedMovies/view/Widget/TopRatedMoviesList.dart';
+import 'package:movies_app/app_theme.dart';
 
-class HomeTab extends StatelessWidget {
-  const HomeTab({super.key});
+class HomeTab extends StatefulWidget {
+  @override
+  State<HomeTab> createState() => _HomeTabState();
+}
+
+class _HomeTabState extends State<HomeTab> {
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text(
-        'Home tab',
-        style: TextStyle(
-          color: Colors.white,
-        ),
+    return Scaffold(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Spacer(),
+          topRatedMoviesList(),
+        ],
       ),
     );
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movies_app/app_theme.dart';
 
 class ErrorIndicator extends StatelessWidget {
   const ErrorIndicator({super.key});
@@ -8,6 +9,7 @@ class ErrorIndicator extends StatelessWidget {
     return const Center(
       child: Text(
         'Something went wrong!',
+        style: TextStyle(color: AppTheme.white),
       ),
     );
   }

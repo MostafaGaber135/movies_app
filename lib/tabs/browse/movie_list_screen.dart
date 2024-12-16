@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/api/api.dart';
+import 'package:movies_app/api.dart';
 import 'package:movies_app/app_theme.dart';
 
 class MoviesListScreen extends StatelessWidget {
@@ -73,7 +73,7 @@ class MoviesListScreen extends StatelessWidget {
                       ),
                 ),
                 leading: Image.asset(
-                  'assets/images/action.png', 
+                  'assets/images/action.png',
                   fit: BoxFit.cover,
                   width: 50,
                   height: 75,

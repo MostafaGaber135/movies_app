@@ -24,14 +24,16 @@ class AppTheme {
   static const Color amberOrange = Color(0xFFFFB224);
 
   static ThemeData lightTheme = ThemeData(
-    primaryColor: darkBlack,
+    primaryColor: AppTheme.darkBlack,
     appBarTheme: const AppBarTheme(
       elevation: 0,
       scrolledUnderElevation: 0,
       backgroundColor: Colors.transparent,
       centerTitle: true,
+      titleTextStyle: TextStyle(color: white, fontSize: 20),
+      foregroundColor: charcoalGrey,
     ),
-    scaffoldBackgroundColor: darkBlack,
+    scaffoldBackgroundColor: AppTheme.darkBlack,
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       type: BottomNavigationBarType.fixed,
       backgroundColor: pitchBlack,
@@ -42,51 +44,61 @@ class AppTheme {
     ),
     textTheme: const TextTheme(
       labelSmall: TextStyle(
+        color: white,
         fontSize: 8,
         fontWeight: FontWeight.w400,
         fontFamily: 'Inter',
       ),
       labelMedium: TextStyle(
+        color: white,
         fontSize: 10,
         fontWeight: FontWeight.w400,
         fontFamily: 'Inter',
       ),
       labelLarge: TextStyle(
+        color: white,
         fontSize: 13,
         fontWeight: FontWeight.w400,
         fontFamily: 'Inter',
       ),
       bodySmall: TextStyle(
+        color: white,
         fontSize: 14,
         fontWeight: FontWeight.w400,
         fontFamily: 'Inter',
       ),
       bodyMedium: TextStyle(
+        color: white,
         fontSize: 15,
         fontWeight: FontWeight.w400,
         fontFamily: 'Inter',
       ),
       bodyLarge: TextStyle(
+        color: white,
         fontSize: 18,
         fontWeight: FontWeight.w400,
         fontFamily: 'Inter',
       ),
       headlineSmall: TextStyle(
+        color: white,
         fontSize: 22,
         fontWeight: FontWeight.w400,
         fontFamily: 'Inter',
       ),
       titleSmall: TextStyle(
+        color: white,
         fontSize: 10,
         fontWeight: FontWeight.w400,
         fontFamily: 'Poppins',
       ),
       titleMedium: TextStyle(
+        color: white,
         fontSize: 14,
         fontWeight: FontWeight.w600,
         fontFamily: 'Poppins',
       ),
       titleLarge: TextStyle(
+        color: white,
         fontSize: 18,
         fontWeight: FontWeight.w400,
         fontFamily: 'Poppins',

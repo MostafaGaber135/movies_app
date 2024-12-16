@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:movies_app/app_theme.dart';
 
@@ -19,8 +18,8 @@ class SplashScreen extends StatelessWidget {
         );
       },
     );
-    return   Scaffold(
-      backgroundColor:    AppTheme.darkBlack,
+    return Scaffold(
+      backgroundColor: AppTheme.darkBlack,
       body: Center(
         child: Image.asset(
           'assets/images/movies.png',

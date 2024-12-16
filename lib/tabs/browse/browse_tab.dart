@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/api/api.dart';
 import 'package:movies_app/app_theme.dart';
+import 'package:movies_app/tabs/browse/data/genre_api.dart';
 import 'package:movies_app/tabs/browse/movie_list_screen.dart';
 import 'package:movies_app/widgets/custom_browser.dart';
 import 'package:movies_app/widgets/error_indicator.dart';

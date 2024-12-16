@@ -16,7 +16,7 @@ class IntroPageScreen extends StatefulWidget {
 
 class _IntroPageScreenState extends State<IntroPageScreen> {
   List<Widget> tabs = [
-    const HomeTab(),
+    HomeTab(),
     const SearchTab(),
     const BrowserTab(),
     const WatchlistTab(),
